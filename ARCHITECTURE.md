@@ -267,11 +267,3 @@ If you want **Copilot in Power BI**, you need **F64 minimum**. This is a real co
 | dbt-fabric for transformation | If you have an existing Spark codebase, can use Fabric Notebooks instead |
 | Star schema in gold | Wide-table / OBT pattern is cheaper to build but worse for ad-hoc analysis at scale |
 
-## Related
-
-- [README](README.md)
-- [`semantic-model/`](semantic-model/retail-sales.SemanticModel/) — the actual TMDL files
-- [`dbt/`](dbt/) — transformation project
-- [`contracts/`](contracts/) — gold table contracts
-- [Pattern — Power BI & Fabric Roadmap](../../docs/patterns/power-bi-fabric-roadmap.md)
-- [Reference Architecture — Data Flow (Medallion)](../../docs/reference-architecture/data-flow-medallion.md)
