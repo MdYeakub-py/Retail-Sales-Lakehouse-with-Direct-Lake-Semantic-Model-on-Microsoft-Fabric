@@ -121,13 +121,6 @@ dbt test       # data quality
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for full mermaid diagrams (data flow, identity, deployment topology).
 
-## What this example deliberately does NOT include
-
-- ❌ Real-time streaming (use the `streaming/` example or the [streaming-cdc pattern](../../docs/patterns/streaming-cdc.md))
-- ❌ Cross-region disaster recovery (single region; see [DR.md](../../docs/DR.md))
-- ❌ Workspace-level RBAC automation (provision identities + assign roles in your platform IaC, then `az rest` after deploy)
-- ❌ Power BI Apps (publishing a packaged app — manual portal step)
-- ❌ Real Fabric Deployment Pipelines (Dev → Test → Prod — see [Power BI Roadmap pattern](../../docs/patterns/power-bi-fabric-roadmap.md))
 
 These are deliberately scoped out to keep the example understandable; pointers to where they live in the rest of the repo are above.
 
