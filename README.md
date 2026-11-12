@@ -134,17 +134,3 @@ These are deliberately scoped out to keep the example understandable; pointers t
 | **Total dev (paused)** | **~$89/mo** | | |
 
 **Cost lever:** F-SKUs can be paused. Schedule pause/resume via runbook for non-prod. Prod F64 typically runs 24/7.
-
-## Production hardening checklist
-
-Before pointing real users at it:
-
-- [ ] Capacity assignment: prod workspace on its own F-SKU; don't share with dev
-- [ ] Workspace identity: configure managed identity for OneLake shortcut auth (vs SAS in this dev sample)
-- [ ] Private endpoints on the underlying ADLS (separate Bicep — see `shared/modules/storage.bicep`)
-- [ ] Fabric Trusted Workspace Access for cross-workspace shortcuts (if applicable)
-- [ ] Sensitivity labels on the semantic model (Microsoft Purview Information Protection)
-- [ ] Row-level security in TMDL — see `tables/DimCustomer.tmdl` for the example pattern
-- [ ] Object-level security — hide sensitive columns from non-privileged roles
-- [ ] Backup/restore strategy — currently OneLake doesn't have point-in-time restore; rely on source-of-truth ADLS retention
-- [ ] Eval suite for any Copilot-in-Power-BI usage on this model — see [LLMOps pattern](../../docs/patterns/llmops-evaluation.md)
